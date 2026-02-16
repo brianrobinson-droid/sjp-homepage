@@ -10,6 +10,23 @@ import CTABanner from '@/components/CTABanner';
 import Footer from '@/components/Footer';
 import styles from './page.module.css';
 
+/* SJP image URLs from the live site */
+const SJP_IMAGES = {
+  hero: 'https://www.sjp.co.uk/sites/sjp-corp/files/SJP/advice-and-products/tax-year-end-2526/TYE-carousel-corp%20%281%29.png',
+  featureCards: {
+    lookingForAdvice:
+      'https://www.sjp.co.uk/sites/sjp-corp/files/styles/desktop/public/SJP/homepage/looking-for-advice.png?itok=dTUmgKhI',
+    becomeAdviser:
+      'https://www.sjp.co.uk/sites/sjp-corp/files/styles/desktop/public/SJP/homepage/already-client.png?itok=7H8BTvtj',
+    buildCareer:
+      'https://www.sjp.co.uk/sites/sjp-corp/files/styles/desktop/public/SJP/homepage/st-james.png?itok=g_36sKd9',
+    shareholderInfo:
+      'https://www.sjp.co.uk/sites/sjp-corp/files/styles/desktop/public/SJP/homepage/About-2.png?itok=ZYL7cOl0',
+  },
+  ctaBanner:
+    'https://www.sjp.co.uk/sites/sjp-corp/files/styles/desktop/public/SJP/homepage/looking-for-advice.png?itok=dTUmgKhI',
+};
+
 export default function HomePage() {
   const { t } = useTranslation();
 
@@ -23,6 +40,8 @@ export default function HomePage() {
       ctaText: t('featureCards.lookingForAdvice.cta'),
       ctaHref: '/advice',
       decorationType: 'none' as const,
+      imageSrc: SJP_IMAGES.featureCards.lookingForAdvice,
+      imageAlt: 'Financial adviser speaking with client',
     },
     {
       title: t('featureCards.becomeAdviser.title'),
@@ -33,6 +52,8 @@ export default function HomePage() {
       ctaText: t('featureCards.becomeAdviser.cta'),
       ctaHref: '/become-adviser',
       decorationType: 'starburst' as const,
+      imageSrc: SJP_IMAGES.featureCards.becomeAdviser,
+      imageAlt: 'SJP adviser reviewing documents',
     },
     {
       title: t('featureCards.buildCareer.title'),
@@ -43,6 +64,8 @@ export default function HomePage() {
       ctaText: t('featureCards.buildCareer.cta'),
       ctaHref: '/careers',
       decorationType: 'watercolour' as const,
+      imageSrc: SJP_IMAGES.featureCards.buildCareer,
+      imageAlt: 'Professional at St. James\'s Place',
     },
     {
       title: t('featureCards.shareholderInfo.title'),
@@ -53,6 +76,8 @@ export default function HomePage() {
       ctaText: t('featureCards.shareholderInfo.cta'),
       ctaHref: '/shareholders',
       decorationType: 'starburst' as const,
+      imageSrc: SJP_IMAGES.featureCards.shareholderInfo,
+      imageAlt: 'Shareholder information',
     },
   ];
 
@@ -78,7 +103,7 @@ export default function HomePage() {
       <main>
         {/* Hero + Client Links */}
         <div className={styles.heroSection}>
-          <HeroBanner />
+          <HeroBanner backgroundImage={SJP_IMAGES.hero} />
           <div className={styles.clientLinksOverlay}>
             <ClientLinksPanel />
           </div>
@@ -106,7 +131,7 @@ export default function HomePage() {
         <LatestNews articles={newsArticles} />
 
         {/* CTA Banner */}
-        <CTABanner />
+        <CTABanner backgroundImage={SJP_IMAGES.ctaBanner} />
       </main>
 
       <Footer />

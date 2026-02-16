@@ -31,7 +31,7 @@ export default function FeatureCard({
 
         <ul className={styles.linkList}>
           {links.map((link) => (
-            <li key={link.href}>
+            <li key={link.label}>
               <a className={styles.link} href={link.href}>
                 {link.label}
               </a>

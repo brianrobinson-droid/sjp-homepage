@@ -1,0 +1,663 @@
+/* AEM Status Page */
+
+.page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.pageHeader {
+  background-color: var(--sjp-navy);
+  color: var(--sjp-white);
+  padding: var(--space-4xl) var(--space-xl) var(--space-2xl);
+  text-align: center;
+}
+
+.pageTitle {
+  font-family: 'Playfair Display', var(--font-heading), serif;
+  font-size: var(--text-5xl);
+  color: var(--sjp-white);
+  margin: 0 0 var(--space-sm);
+}
+
+.pageSubtitle {
+  font-family: 'Poppins', var(--font-body), sans-serif;
+  font-size: var(--text-lg);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: var(--font-body-weight-light);
+  margin: 0 0 var(--space-lg);
+}
+
+.navLinks {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+.navLink {
+  color: var(--sjp-teal);
+  font-size: var(--text-sm);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.navLink:hover {
+  opacity: 0.8;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+/* Jump to section nav */
+.jumpNav {
+  background: var(--sjp-white);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg) var(--space-xl);
+  margin: var(--space-2xl) auto;
+  max-width: 1200px;
+}
+
+.jumpNavTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--sjp-dark-text);
+  margin: 0 0 var(--space-md);
+}
+
+.jumpNavLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.jumpNavChip {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  background: #f0f0f0;
+  border-radius: 100px;
+  font-size: var(--text-sm);
+  font-family: 'Poppins', sans-serif;
+  color: var(--sjp-dark-text);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border: 1px solid #e5e7eb;
+}
+
+.jumpNavChip:hover {
+  background: var(--sjp-navy);
+  color: var(--sjp-white);
+  border-color: var(--sjp-navy);
+}
+
+/* Sections */
+.section {
+  padding: var(--space-3xl) 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  font-family: 'Poppins', var(--font-body), sans-serif;
+  font-weight: var(--font-body-weight-semibold);
+  font-size: var(--text-2xl);
+  color: var(--sjp-dark-text);
+  margin: 0 0 var(--space-lg);
+  padding-left: var(--space-md);
+  border-left: 4px solid var(--sjp-teal);
+}
+
+.sectionDescription {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--text-sm);
+  color: var(--sjp-mid-grey);
+  line-height: 1.7;
+  margin: 0 0 var(--space-xl);
+  max-width: 800px;
+}
+
+/* Connection Status */
+.connectionGrid {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.statusCard {
+  background: var(--sjp-white);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  text-align: center;
+}
+
+.statusLabel {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--sjp-mid-grey);
+  margin: 0 0 var(--space-sm);
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  border-radius: 100px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.badgeMock {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badgeAem {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.statusNote {
+  font-size: var(--text-xs);
+  color: var(--sjp-mid-grey);
+  margin: 0;
+}
+
+/* Environment Variables Table */
+.envTableTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: var(--text-base);
+  color: var(--sjp-dark-text);
+  margin: 0 0 var(--space-md);
+}
+
+/* Tables */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--sjp-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.table th,
+.table td {
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid #f0f0f0;
+  font-size: var(--text-sm);
+  font-family: 'Poppins', sans-serif;
+}
+
+.table th {
+  background: #f8f9fa;
+  font-weight: 600;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--sjp-mid-grey);
+}
+
+.table code {
+  font-size: var(--text-xs);
+  background: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.endpointBar {
+  background: #f8f9fa;
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+  margin-top: var(--space-md);
+  font-size: var(--text-sm);
+  font-family: 'Poppins', sans-serif;
+  color: var(--sjp-mid-grey);
+}
+
+.endpointBar strong {
+  color: var(--sjp-dark-text);
+}
+
+/* Status indicators */
+.statusDot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.dotGreen {
+  background-color: #22c55e;
+}
+
+.dotGrey {
+  background-color: #9ca3af;
+}
+
+.dotOrange {
+  background-color: #f59e0b;
+}
+
+/* Architecture Pipeline */
+.pipeline {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  overflow-x: auto;
+  padding: var(--space-md) 0;
+}
+
+.pipelineStep {
+  flex: 1;
+  min-width: 180px;
+  background: var(--sjp-white);
+  border: 1px dashed #d1d5db;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  position: relative;
+}
+
+.pipelineStep:last-child::after {
+  display: none;
+}
+
+.pipelineArrow {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--space-sm);
+  color: var(--sjp-mid-grey);
+  font-size: var(--text-xl);
+  flex-shrink: 0;
+}
+
+.pipelineStepTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: var(--text-base);
+  color: var(--sjp-dark-text);
+  margin: 0 0 2px;
+}
+
+.pipelineStepSub {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--text-xs);
+  color: var(--sjp-mid-grey);
+  margin: 0 0 var(--space-md);
+}
+
+.pipelineDetail {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 11px;
+  color: var(--sjp-dark-text);
+  line-height: 1.8;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* Content Models */
+.modelCard {
+  background: var(--sjp-white);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: var(--space-xl);
+}
+
+.modelHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+  background: #f8f9fa;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modelName {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: var(--text-base);
+  color: var(--sjp-dark-text);
+  margin: 0;
+}
+
+.modelType {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: var(--text-xs);
+  background: #f0f0f0;
+  padding: 3px 8px;
+  border-radius: 3px;
+  color: var(--sjp-mid-grey);
+}
+
+.modelMapper {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--text-xs);
+  color: var(--sjp-mid-grey);
+}
+
+.modelMapper code {
+  color: var(--sjp-teal);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-weight: 600;
+}
+
+.modelTarget {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--text-xs);
+  color: var(--sjp-mid-grey);
+}
+
+.modelTarget strong {
+  color: var(--sjp-dark-text);
+  font-weight: 700;
+}
+
+/* Code blocks */
+.codeBlock {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  overflow-x: auto;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 12px;
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+
+.codeLabel {
+  display: inline-block;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: var(--text-xs);
+  background: #f0f0f0;
+  padding: 4px 10px;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid #e5e7eb;
+  border-bottom: none;
+  color: var(--sjp-dark-text);
+  margin-bottom: 0;
+}
+
+/* Data Flow Demo */
+.dataFlowContainer {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: var(--space-md);
+  align-items: start;
+}
+
+.dataFlowLabel {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.dataFlowBadge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badgeAemLabel {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.badgeComponentLabel {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.dataFlowArrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: var(--space-2xl);
+  color: var(--sjp-mid-grey);
+  gap: var(--space-xs);
+}
+
+.dataFlowArrowText {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: var(--text-xs);
+  color: var(--sjp-teal);
+  font-weight: 600;
+}
+
+/* Checklist */
+.progressBar {
+  height: 12px;
+  background: #e5e7eb;
+  border-radius: 100px;
+  overflow: hidden;
+  margin-bottom: var(--space-2xl);
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--sjp-teal), #2bc4b0);
+  border-radius: 100px;
+  transition: width 0.5s ease;
+}
+
+.checklistGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.checklistColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.checklistColumnTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: var(--text-base);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin: 0 0 var(--space-lg);
+}
+
+.completedTitle {
+  color: #16a34a;
+}
+
+.remainingTitle {
+  color: #f59e0b;
+}
+
+.checkItem {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.checkItem:last-child {
+  border-bottom: none;
+}
+
+.checkIcon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.checkIconGreen {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.checkIconOrange {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.checkItemContent {
+  flex: 1;
+}
+
+.checkItemTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: var(--text-sm);
+  color: var(--sjp-dark-text);
+  margin: 0 0 2px;
+}
+
+.checkItemDesc {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--text-xs);
+  color: var(--sjp-mid-grey);
+  margin: 0;
+}
+
+.checkItemFile {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 11px;
+  color: #9ca3af;
+  margin: 2px 0 0;
+}
+
+/* SPA Editor section */
+.spaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.spaCard {
+  background: var(--sjp-white);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+}
+
+.spaCardTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: var(--text-base);
+  color: var(--sjp-dark-text);
+  margin: 0 0 var(--space-sm);
+}
+
+.spaCardDesc {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--text-sm);
+  color: var(--sjp-mid-grey);
+  line-height: 1.7;
+  margin: 0 0 var(--space-md);
+}
+
+.spaList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.spaList li {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: var(--text-xs);
+  color: var(--sjp-dark-text);
+  padding: var(--space-xs) 0;
+}
+
+.spaList li::before {
+  content: '→ ';
+  color: var(--sjp-teal);
+}
+
+/* Responsive */
+@media (max-width: 1023px) {
+  .connectionGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .pipeline {
+    flex-direction: column;
+  }
+
+  .pipelineArrow {
+    transform: rotate(90deg);
+    justify-content: center;
+  }
+
+  .dataFlowContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .dataFlowArrow {
+    flex-direction: row;
+    padding-top: 0;
+  }
+
+  .checklistGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .spaGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .pageHeader {
+    padding: var(--space-2xl) var(--space-md) var(--space-xl);
+  }
+
+  .pageTitle {
+    font-size: var(--text-3xl);
+  }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+
+  .jumpNav {
+    margin: var(--space-xl) var(--space-md);
+  }
+
+  .modelHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

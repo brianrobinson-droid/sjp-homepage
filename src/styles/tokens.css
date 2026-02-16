@@ -1,0 +1,65 @@
+/* SJP Design Tokens */
+:root {
+  /* Primary Colours */
+  --sjp-navy: #0a1428;
+  --sjp-teal: #3fdcc8;
+  --sjp-white: #ffffff;
+  --sjp-light-grey: #f3f3f4;
+  --sjp-mid-grey: #6b7280;
+  --sjp-dark-text: #0a1428;
+  --sjp-light-text: #ffffff;
+  --sjp-light-text-muted: rgba(255, 255, 255, 0.8);
+  --sjp-orange: #e87722;
+
+  /* Typography */
+  --font-heading: 'NoeDisplaySJP-Bold', Georgia, 'Times New Roman', serif;
+  --font-accent: 'SJPSouthCoast', cursive;
+  --font-body: 'Poppins', sans-serif;
+  --font-body-weight-light: 300;
+  --font-body-weight-regular: 400;
+  --font-body-weight-medium: 500;
+  --font-body-weight-semibold: 600;
+
+  /* Font Sizes */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+
+  /* Layout */
+  --max-width: 1340px;
+  --header-height: 100px;
+
+  /* Border Radius */
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(10, 20, 40, 0.05);
+  --shadow-md: 0 4px 6px rgba(10, 20, 40, 0.07);
+  --shadow-lg: 0 10px 25px rgba(10, 20, 40, 0.1);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+}

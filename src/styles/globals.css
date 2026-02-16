@@ -1,0 +1,152 @@
+@import './tokens.css';
+
+/* Font Faces - Using Google Fonts Poppins as a close match, custom fonts referenced for AEM */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Poppins', var(--font-body), sans-serif;
+  font-weight: var(--font-body-weight-regular);
+  color: var(--sjp-dark-text);
+  background-color: var(--sjp-white);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', var(--font-heading), serif;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--sjp-dark-text);
+}
+
+h1 { font-size: var(--text-5xl); }
+h2 { font-size: var(--text-4xl); }
+h3 { font-size: var(--text-3xl); }
+h4 { font-size: var(--text-2xl); }
+
+a {
+  color: var(--sjp-dark-text);
+  text-decoration: underline;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--sjp-teal);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Utility Classes */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* SJP Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Poppins', var(--font-body), sans-serif;
+  font-weight: var(--font-body-weight-medium);
+  font-size: var(--text-sm);
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--sjp-teal);
+  color: var(--sjp-dark-text);
+  border-color: var(--sjp-teal);
+}
+
+.btn-primary:hover {
+  background-color: #2bc4b0;
+  border-color: #2bc4b0;
+  color: var(--sjp-dark-text);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--sjp-dark-text);
+  border-color: var(--sjp-dark-text);
+}
+
+.btn-secondary:hover {
+  background-color: var(--sjp-dark-text);
+  color: var(--sjp-white);
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: var(--sjp-white);
+  border-color: var(--sjp-white);
+}
+
+.btn-outline-white:hover {
+  background-color: var(--sjp-white);
+  color: var(--sjp-dark-text);
+}
+
+/* Accent text (e.g., "harder" in hero) */
+.accent-text {
+  font-family: 'Dancing Script', cursive, var(--font-accent);
+  color: var(--sjp-teal);
+  font-style: normal;
+}
+
+/* Responsive breakpoints reference:
+   Mobile: < 768px
+   Tablet: 768px - 1023px
+   Desktop: >= 1024px
+   Wide: >= 1340px
+*/
+
+@media (max-width: 767px) {
+  h1 { font-size: var(--text-3xl); }
+  h2 { font-size: var(--text-2xl); }
+  h3 { font-size: var(--text-xl); }
+
+  .container {
+    padding: 0 var(--space-md);
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "header": {
+    "search": "Search",
+    "findAdviser": "Find an adviser",
+    "careers": "Careers",
+    "asiaUae": "Asia & UAE",
+    "lookingForAdvice": "I'm looking for advice",
+    "becomeAdviser": "Become an SJP adviser",
+    "shareholderInfo": "Information for shareholders",
+    "partnerArea": "Partner area",
+    "clientSignIn": "Client sign in",
+    "menuLabel": "Menu"
+  },
+  "hero": {
+    "headingLine1": "Make your",
+    "headingLine2": "money work",
+    "headingAccent": "harder",
+    "description": "Good habits means making the most of your available tax relief and allowances every year. So your effort brings more reward.",
+    "cta": "Discover more"
+  },
+  "clientLinks": {
+    "title": "Client links",
+    "onlineServices": "Online services",
+    "helpAndSupport": "Help and support",
+    "bankDetails": "Bank details",
+    "fundNews": "Fund news and updates",
+    "fundInformation": "Fund information",
+    "refundClaims": "Ongoing servicing charge refund claims",
+    "chargesExplained": "Our charges explained"
+  },
+  "featureCards": {
+    "lookingForAdvice": {
+      "title": "Looking for financial advice?",
+      "description": "Working with a trusted financial adviser will help give you confidence that you're making informed decisions and building a financial plan that's as individual as you are.",
+      "links": {
+        "howCanWeHelp": "How can we help?",
+        "adviceAndProducts": "Advice and products",
+        "whoWeAre": "Who we are",
+        "ourCharges": "Our charges",
+        "ourFundPrices": "Our fund prices"
+      },
+      "cta": "One-to-one advice"
+    },
+    "becomeAdviser": {
+      "title": "Become an SJP adviser",
+      "description": "The long-term relationship between our trusted financial advisers and their clients is at the heart of what we do. That's why it's important we attract and train the highest quality of advice professionals to join our Partnership.",
+      "links": {
+        "alignBusiness": "Align your business",
+        "launchBusiness": "Launch your business",
+        "joinEstablished": "Join an established business",
+        "trainToBeAdviser": "Train to be a financial adviser"
+      },
+      "cta": "Join our Partnership"
+    },
+    "buildCareer": {
+      "title": "Build your career",
+      "description": "Joining St. James's Place is about joining a community. Together with us, you'll see how the right financial advice can turn dreams into reality. We have job opportunities at all levels throughout the company.",
+      "links": {
+        "lifeAtSjp": "Life at SJP",
+        "earlyCareers": "Early careers",
+        "vacancies": "Vacancies"
+      },
+      "cta": "Explore the careers site"
+    },
+    "shareholderInfo": {
+      "title": "Shareholder information",
+      "description": "As one of the largest advice-led wealth management firms in the UK, we're committed to delivering value for our clients and our shareholders alike.",
+      "links": {
+        "whyInvest": "Why invest in SJP?",
+        "esgHub": "ESG reporting hub",
+        "results": "Results, reports & presentations",
+        "shareholderInfo": "Shareholder Information"
+      },
+      "cta": "Discover more"
+    }
+  },
+  "latestNews": {
+    "title": "Latest News",
+    "readAllNews": "Read all news",
+    "minuteRead": "minute read",
+    "articles": [
+      {
+        "id": "1",
+        "category": "NEWS",
+        "readTime": 4,
+        "title": "Ageing Asia - a widening demographic problem?",
+        "date": "12 Feb 2026",
+        "image": "/images/news-1.jpg",
+        "href": "#"
+      },
+      {
+        "id": "2",
+        "category": "NEWS",
+        "readTime": 2,
+        "title": "Time to Talk Day – why talking could improve financial wellbeing",
+        "date": "5 Feb 2026",
+        "image": "/images/news-2.jpg",
+        "href": "#"
+      },
+      {
+        "id": "3",
+        "category": "INVESTING, NEWS",
+        "readTime": 5,
+        "title": "The tax benefits of owning a home",
+        "date": "3 Feb 2026",
+        "image": "/images/news-3.jpg",
+        "href": "#"
+      }
+    ]
+  },
+  "ctaBanner": {
+    "heading": "One to one financial advice",
+    "description": "Planning for the future calls for invaluable advice.",
+    "cta": "Find a financial adviser"
+  },
+  "footer": {
+    "lookingForAdvice": {
+      "title": "I'M LOOKING FOR ADVICE",
+      "links": {
+        "howCanWeHelp": "How can we help?",
+        "adviceAndProducts": "Advice and products",
+        "whoWeAre": "Who we are"
+      }
+    },
+    "mediaMarketing": {
+      "title": "MEDIA & MARKETING",
+      "links": {
+        "responsibleMarketing": "Responsible Marketing Policy",
+        "mediaCentre": "Media centre"
+      }
+    },
+    "becomeAdviser": {
+      "title": "BECOME AN SJP ADVISER",
+      "links": {
+        "alignBusiness": "Align your business",
+        "launchBusiness": "Launch your business",
+        "joinEstablished": "Join an established business"
+      }
+    },
+    "moreSjp": {
+      "title": "MORE ST. JAMES'S PLACE",
+      "links": {
+        "theAcademy": "The Academy",
+        "charitableFoundation": "The Charitable Foundation",
+        "sjpAsia": "St. James's Place Asia",
+        "careers": "Careers"
+      }
+    },
+    "shareholders": {
+      "title": "INFORMATION FOR SHAREHOLDERS",
+      "links": {
+        "esgHub": "ESG reporting hub",
+        "shareholderInfo": "Shareholder information"
+      }
+    },
+    "getInTouch": {
+      "title": "GET IN TOUCH",
+      "links": {
+        "contactUs": "Contact us",
+        "ourLocations": "Our locations",
+        "partnerHelp": "Partner help"
+      }
+    },
+    "followUs": "FOLLOW US",
+    "findAdviser": "Find an adviser",
+    "legal": {
+      "sitemap": "Sitemap",
+      "legalInfo": "Legal Information",
+      "privacyPolicy": "Privacy Policy",
+      "modernSlavery": "Modern Slavery Statement",
+      "emailAlerts": "Email Alerts",
+      "cookiePreferences": "Cookie Preferences"
+    },
+    "copyright": "Copyright St. James's Place © 2026"
+  },
+  "styleGuide": {
+    "title": "SJP Style Guide",
+    "subtitle": "Design tokens, typography, and component styles"
+  },
+  "componentGallery": {
+    "title": "Component Gallery",
+    "subtitle": "All components used in the SJP homepage"
+  }
+}

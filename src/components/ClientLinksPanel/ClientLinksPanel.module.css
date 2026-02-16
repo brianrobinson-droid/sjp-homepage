@@ -1,0 +1,65 @@
+.panel {
+  background-color: var(--sjp-navy);
+  padding: var(--space-xl) var(--space-2xl);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.title {
+  font-family: 'Poppins', var(--font-body), sans-serif;
+  font-size: var(--text-base);
+  font-weight: var(--font-body-weight-semibold);
+  color: var(--sjp-white);
+  line-height: 1.4;
+}
+
+.linkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.link {
+  color: var(--sjp-teal);
+  font-family: 'Poppins', var(--font-body), sans-serif;
+  font-size: var(--text-sm);
+  font-weight: var(--font-body-weight-regular);
+  line-height: 1.6;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--sjp-white);
+  opacity: 0.9;
+}
+
+/* Desktop: panel overlaps hero on the right */
+@media (min-width: 768px) {
+  .panel {
+    width: 280px;
+    padding: var(--space-xl) var(--space-xl);
+  }
+}
+
+/* Mobile: full width, stacks below hero */
+@media (max-width: 767px) {
+  .panel {
+    width: 100%;
+    padding: var(--space-lg) var(--space-md);
+  }
+}
